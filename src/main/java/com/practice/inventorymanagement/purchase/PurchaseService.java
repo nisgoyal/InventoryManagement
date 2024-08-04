@@ -7,4 +7,5 @@ import java.util.List;
 public interface PurchaseService {
     List<Purchase> findAll();
     boolean save(Purchase purchase);
+    List<PurchaseSummary> getPurchaseSummary();
 }

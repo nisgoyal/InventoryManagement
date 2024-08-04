@@ -5,6 +5,7 @@ import com.practice.inventorymanagement.item.ItemRepository;
 import com.practice.inventorymanagement.purchase.Purchase;
 import com.practice.inventorymanagement.purchase.PurchaseRepository;
 import com.practice.inventorymanagement.purchase.PurchaseService;
+import com.practice.inventorymanagement.purchase.PurchaseSummary;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -36,5 +37,10 @@ public class PurchaseServiceImpl implements PurchaseService {
             return true;
         }
         return false;
+    }
+
+    @Override
+    public List<PurchaseSummary> getPurchaseSummary() {
+        return this.purchaseRepository.getPurchaseSummaries();
     }
 }

@@ -30,4 +30,8 @@ public class PurchaseController {
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
     }
 
+    @GetMapping("/summary")
+    public ResponseEntity<List<PurchaseSummary>> getPurchaseSummary() {
+        return ResponseEntity.ok(this.purchaseService.getPurchaseSummary());
+    }
 }
