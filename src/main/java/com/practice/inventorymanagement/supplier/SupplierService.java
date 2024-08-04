@@ -7,4 +7,5 @@ public interface SupplierService {
     List<Supplier> findAll();
     void save(Supplier supplier);
     boolean delete(Long id);
+    Supplier findById(Long id);
 }

@@ -35,4 +35,9 @@ public class ItemServiceImpl implements ItemService {
             return false;
         }
     }
+
+    @Override
+    public Item findById(Long id) {
+        return this.itemRepository.findById(id).orElse(null);
+    }
 }

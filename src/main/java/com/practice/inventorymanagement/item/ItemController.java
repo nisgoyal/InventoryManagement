@@ -35,4 +35,13 @@ public class ItemController {
         }
         return new ResponseEntity<>("Item not found", HttpStatus.NOT_FOUND);
     }
+
+    @GetMapping("/sample")
+    public ResponseEntity<String> addSampleSuppliers() {
+        addItem(new Item(1L, "Item X", 25.5));
+        addItem(new Item(2L, "Item Y", 15.75));
+        addItem(new Item(3L, "Item Z", 9.99));
+        addItem(new Item(4L, "Item A", 22.0));
+        return ResponseEntity.ok("Sample Items added successfully");
+    }
 }

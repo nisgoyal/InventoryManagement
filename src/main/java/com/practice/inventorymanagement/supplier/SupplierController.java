@@ -34,4 +34,13 @@ public class SupplierController {
         }
         return new ResponseEntity<>("Supplier not found", HttpStatus.NOT_FOUND);
     }
+
+    @GetMapping("/sample")
+    public ResponseEntity<String> addSampleSuppliers() {
+        addSupplier(new Supplier(1L, "Supplier A", 4.5));
+        addSupplier(new Supplier(2L, "Supplier B", 3.8));
+        addSupplier(new Supplier(3L, "Supplier C", 4.9));
+        addSupplier(new Supplier(4L, "Supplier D", 4.2));
+        return ResponseEntity.ok("Sample Suppliers added successfully");
+    }
 }
