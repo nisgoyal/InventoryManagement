@@ -21,7 +21,7 @@ public class Purchase {
 
     private Long quantity;
     private Double amount;
-    private LocalDateTime date;
+    private LocalDateTime dateOfP;
 
     public Purchase() {}
 
@@ -31,7 +31,7 @@ public class Purchase {
         this.item = item;
         this.quantity = quantity;
         this.amount = amount;
-        this.date = date;
+        this.dateOfP = date;
     }
 
     public Long getId() {
@@ -75,10 +75,10 @@ public class Purchase {
     }
 
     public LocalDateTime getDate() {
-        return date;
+        return dateOfP;
     }
 
     public void setDate(LocalDateTime date) {
-        this.date = date;
+        this.dateOfP = date;
     }
 }
